@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <link rel="stylesheet" href="assets/styles/style.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-200 flex flex-col items-center">
+    <div class="container lg:w-2/6 w-2/3 bg-white p-6 rounded-xl rounded-br-[6rem] my-3">
+      <div class="relative">
+        <form action="">
+          <div class="flex justify-around lg:w-1/4 w-[30%]">
+            <div class="flex flex-col w-full mr-3" id="container_jour">
+              <label
+                class="uppercase text-gray-600 font-semibold text-xs tracking-widest"
+                for="birthday_day"
+                >Day</label
+              >
+              <input
+                class="border-2 border-gray-200 rounded px-2 py-2 my-2 text-black font-bold"
+                type="number"
+                name="birthday_day"
+                id="birthday_day"
+                placeholder="DD"
+              />
+              <p id="erreur_jour" class="text-[0.5rem] italic tracking-wide hidden">Must be a valid day</p>
+            </div>
+
+            <div class="flex flex-col w-full mr-3" id="container_mois">
+              <label
+                class="uppercase text-gray-600 font-semibold text-xs tracking-widest"
+                for="birthday_month"
+                id="container_mois_label"
+                >Month</label
+              >
+              <input
+                class="border-2 border-gray-200 rounded px-2 py-2 my-2 text-black font-bold"
+                type="number"
+                name="birthday_month"
+                id="birthday_month"
+                placeholder="MM"
+              />
+              <p id="erreur_mois" class="text-[0.5rem] italic tracking-wide hidden">Must be a valid month</p>
+            </div>
+
+            <div class="flex flex-col w-full">
+              <label
+                class="uppercase text-gray-600 font-semibold text-xs tracking-widest"
+                for="birthday_year"
+                >Year</label
+              >
+              <input
+                class="border-2 border-gray-200 rounded px-2 py-2 my-2 text-black font-bold"
+                type="number"
+                name="birthday_year"
+                id="birthday_year"
+                placeholder="YYYY"
+              />
+              <p id="erreur_annee" class="text-[0.5rem] italic tracking-wide hidden">Must be a valid year</p>
+            </div>
+          </div>
+
+          <div class="relative">
+            <hr class="h-px lg:my-6 my-12 bg-gray-200 border-0 dark:bg-gray-700" />
+            <button
+              class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 w-12 h-12 rounded-full absolute lg:right-0 -top-5 right-[40%]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="22"
+                viewBox="0 0 46 44"
+                class="-translate-x-1"
+              >
+                <g fill="none" stroke="#FFF" stroke-width="2">
+                  <path
+                    d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <div class="italic mb-3 text-3xl lg:text-4xl">
+          <div class="flex sm:text-5xl font-black">
+            <p id="year" class="text-purple-500">--</p>
+            <p class="pl-2">years</p>
+          </div>
+          <div class="flex sm:text-5xl font-black">
+            <p id="month" class="text-purple-500">--</p>
+            <p class="pl-2">months</p>
+          </div>
+          <div class="flex sm:text-5xl font-black">
+            <p id="day" class="text-purple-500">--</p>
+            <p class="pl-2">days</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://emma-roizot.fr" target="_blank">Emma</a>.
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
